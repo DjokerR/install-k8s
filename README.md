@@ -1,5 +1,3 @@
-# install-k8s
-用于k8s安装
 ### 1、节点之间免密
 ~~~
 
@@ -82,11 +80,11 @@ sudo yum install -y yum-utils device-mapper-persistent-data lvm2
 sudo yum-config-manager --add-repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
 #### Step 3
 sudo sed -i 's+download.docker.com+mirrors.aliyun.com/docker-ce+' /etc/yum.repos.d/docker-ce.repo
-# Step 4: 更新并安装Docker-CE
+#### Step 4: 更新并安装Docker-CE
 sudo yum makecache fast
 sudo yum -y install docker-ce
 yum install docker-ce-20.10.6-3.el7
-# Step 4: 开启Docker服务
+#### Step 4: 开启Docker服务
 sudo service docker start
 
 ~~~
