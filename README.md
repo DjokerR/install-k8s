@@ -33,6 +33,7 @@ sed  -ri  's/SELINUX=enforcing/SELINUX=disable/' /etc/selinux/config
 yum  install -y chrony
 systemctl enable chrony
 systemctl restart chrony
+sed -i -e '/^server/s/^/#/' -e '1a server ntp.aliyun.com iburst' /etc/chrony.conf
 timedatectl set-timezone Asia/Shanghai
 
 ~~~
